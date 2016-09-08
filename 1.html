@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>半透明边框</title>
+  <style>
+    body{
+      background: #ff0066;
+    }
+    .box{
+      border: 10px solid hsla(0,0%,100%,.5);
+      background: white;
+      background-clip: padding-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <p>默认情况下背景会延伸到边框所在的区域下层</p>
+    <p>通过background-clip调整默认行为</p>
+    <p>初始值为border-box，设置为padding-box，浏览器用内边距的外沿剪裁背景</p>
+  </div>
+</body>
+</html>
