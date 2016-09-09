@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>多重边框</title>
+  <style>
+    .container{
+      width: 800px;
+      margin: 0 auto;
+    }
+    .boxShadow{
+      background: yellowgreen;
+      box-shadow: 0 0 0 10px #655,
+                  0 0 0 15px deeppink,
+                  0 2px 5px 15px rgba(0, 0, 0, .6);
+    }
+    .outline{
+      background: yellowgreen;
+      border: 10px solid #655;
+      outline: 5px solid deeppink;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="boxShadow">
+      <h3>box-shadow方案</h3>
+      <p></p>
+    </div>
+    <br>
+    <div class="outline">
+      <h3>outline方案</h3>
+    </div>
+  </div>
+</body>
+</html>
