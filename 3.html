@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>灵活的背景定位</title>
+  <style>
+    .container{
+      width: 800px;
+      margin:40px auto;
+    }
+    .bg-box{
+      width: 400px;
+      height: 300px;
+    }
+    .bp{
+      background: url(tooltip1.svg) no-repeat #58a;
+      background-position: right 20px bottom 10px;
+    }
+    .bo{
+      padding: 10px;
+      background: url(tooltip1.svg) no-repeat #58a
+                  bottom right;/* 或 100% 100% */
+      background-origin: content-box;            
+    }
+    .calc{
+      background: url(tooltip1.svg) no-repeat #58a;
+      background-position: calc(100% - 20px) calc(100% - 10px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="bg-box bp">
+      <h3>background-position的扩展方案</h3>
+      <p>它允许指定背景图片距离任意角的偏移量，在偏移量前面指定关键字</p>
+    </div>
+    <div class="bg-box bo">
+      <h3>background-origin方案</h3>
+      <p>默认情况下background-position是以padding-box为准的，通过设置background-origin设置其基准，border-box或content-box。</p>
+    </div>
+    <div class="bg-box calc">
+      <h3>calc方案</h3>
+      <p>calc函数内部+，-运算符两侧各加一个空格</p>
+      <p>以左上角偏移的思路考虑</p>
+    </div>
+  </div>
+</body>
+</html>
